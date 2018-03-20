@@ -1,27 +1,21 @@
 <template>
-  <div class="myCardRight">
-  <p> bonjour myCardRight</p>
+<div class="myCardRight col-lg-6 col-md-12 ml-auto mr-auto block">
   <myCardRightHeader/>
   <myCardRightContentDesktop/>
-  <myCardRightContentMobile/>
   <myCardRightContentFooter/>
-  </div>
+</div>
 </template>
 
 <script>
 import myCardRightHeader from './content-my-card-right/my-card-right-header'
 import myCardRightContentDesktop from './content-my-card-right/my-card-right-content-desktop'
-import myCardRightContentMobile from './content-my-card-right/my-card-right-content-mobile'
 import myCardRightContentFooter from './content-my-card-right/my-card-right-footer'
-
-
 
 export default {
   name: 'myCardRight',
   components: {
     myCardRightHeader,
     myCardRightContentDesktop,
-    myCardRightContentMobile,
     myCardRightContentFooter
   }
 }

@@ -1,8 +1,12 @@
 <template>
-  <div class="myCard">
-  <myCardLeft/>
-  <myCardRight/>
+<div class="myCard card fullSize ml-auto mr-auto container-fluid">
+  <div class="card-body">
+    <div class="row justify-content-around">
+      <myCardLeft/>
+      <myCardRight/>
+    </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -18,4 +22,7 @@ export default {
 </script>
 
 <style scoped>
+.fullSize {
+  width: 80%;
+}
 </style>
