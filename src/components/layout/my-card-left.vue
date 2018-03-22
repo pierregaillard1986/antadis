@@ -4,7 +4,7 @@
       <div class="leftPart">
         <div class="borderReduce">
           <div class="reduce">
-            <span>-20%</span>
+            <span>{{posts.prices.reduction}}</span>
           </div>
         </div>
         <img class="card-img-left img-fluid" src="assets/pictures/image1.jpg" alt="Card image cap">
@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  props:['posts'],
   name: 'myCardLeft'
 }
 </script>

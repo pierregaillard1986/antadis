@@ -10,60 +10,38 @@
   </nav>
   <div class="tab-content mt-3 d-lg-block" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      <p class="lead">Issu d’un petit élevage familial, visite sur place pour réservation. Petit monstre de race 100 % certifié avec puce électronique, son carnet de santé est à jour et en règle. Ce petit monstre attend votre adoption contre amour, bons soins et beaucoup
-        de câlins !<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra ex sit amet dolor aliquet faucibus consequat ac ex. Aenean enim dui, molestie nec nisl sit amet, molestie bibendum est. Vivamus ligula tellus, mattis non
-        porttitor eget, eleifend eget tortor. Praesent fringilla vitae nisl et tempus. Nulla ornare nulla volutpat erat blandit finibus. Integer et lacus ut arcu vestibulum eleifend.</p>
+      <p class="lead" v-html="posts.description"></p>
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <table>
         <tbody>
-          <tr>
-            <th scope="row" class="pr-3">Poids</th>
-            <td class="pl-5 borderLeftTable">90 g</td>
-          </tr>
-          <tr class="borderTable">
-            <th scope="row" class="pr-3">Couleur(s)</th>
-            <td class="pl-5 borderLeftTable">Bleu, jaune et orange</td>
-          </tr>
-          <tr>
-            <th scope="row" class="pr-3">Caractère</th>
-            <td class="pl-5 borderLeftTable">Sympathique</td>
+          <tr v-for="item in posts.attributes">
+            <th scope="row" class="pr-3">{{item.name}}</th>
+            <td class="pl-5 borderLeftTable">{{item.value}}</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra ex sit amet dolor aliquet faucibus consequat ac ex. Aenean enim dui, molestie nec nisl sit amet, molestie bibendum est. Vivamus ligula tellus, mattis non porttitor eget, eleifend
-        eget tortor. Praesent fringilla vitae nisl et tempus. Nulla ornare nulla volutpat erat blandit finibus. Integer et lacus ut arcu vestibulum eleifend.</p>
+      <p class="lead" v-html="posts.more_info"></p>
     </div>
   </div>
   <!-- affichage mobile -->
   <div class="column d-lg-none">
     <div class="pt-3">
       <h2 class="backgroundCategories pl-4">Description</h2>
-      <p class="lead">Issu d’un petit élevage familial, visite sur place pour réservation. Petit monstre de race 100 % certifié avec puce électronique, son carnet de santé est à jour et en règle. Ce petit monstre attend votre adoption contre amour, bons soins et beaucoup
-        de câlins !<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra ex sit amet dolor aliquet faucibus consequat ac ex. Aenean enim dui, molestie nec nisl sit amet, molestie bibendum est. Vivamus ligula tellus, mattis non
-        porttitor eget, eleifend eget tortor. Praesent fringilla vitae nisl et tempus. Nulla ornare nulla volutpat erat blandit finibus. Integer et lacus ut arcu vestibulum eleifend.</p>
+      {{posts.description}}
     </div>
     <div class="pt-3">
       <h2 class="backgroundCategories pl-4">Caractérisques</h2>
-      <div class="row pb-3">
-        <p class="col-12 mb-0 colorP">Poids :</p>
-        <p class="col-12 mb-0 colorP">90 g</p>
-      </div>
-      <div class="row pb-3">
-        <p class="col-12 mb-0 colorP">Couleur(s)</p>
-        <p class="col-12 mb-0 colorP">Bleu, jaune et orange</p>
-      </div>
-      <div class="row pb-3">
-        <p class="col-12 mb-0 colorP">Caractère</p>
-        <p class="col-12 mb-0 colorP">Sympathique</p>
+      <div class="row pb-3" v-for="item in posts.attributes">
+        <p class="col-12 mb-0 colorP">{{item.name}}</p>
+        <p class="col-12 mb-0 colorP">{{item.value}}</p>
       </div>
     </div>
     <div class="pt-3">
       <h2 class="backgroundCategories pl-4">Plus d'info</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra ex sit amet dolor aliquet faucibus consequat ac ex. Aenean enim dui, molestie nec nisl sit amet, molestie bibendum est. Vivamus ligula tellus, mattis non porttitor eget, eleifend
-        eget tortor. Praesent fringilla vitae nisl et tempus. Nulla ornare nulla volutpat erat blandit finibus. Integer et lacus ut arcu vestibulum eleifend.</p>
+      {{posts.more_info}}
     </div>
   </div>
 </div>
@@ -71,6 +49,7 @@
 
 <script>
 export default {
+  props:['posts'],
   name: 'myCardRightContentDesktop'
 }
 </script>

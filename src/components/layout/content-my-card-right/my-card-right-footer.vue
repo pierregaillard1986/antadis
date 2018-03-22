@@ -2,8 +2,8 @@
   <div class="myCardRightContentFooter container-fluid mt-5 align-items-end containerPrix">
     <div class="row justify-content-around">
       <div class="col-md-6 col-xs-12 row">
-        <p class="col-12 prix text-center">140€</p>
-        <p class="col-12 oldPrice text-center">au lieu de <strike>199,99€</strike></p>
+        <p class="col-12 prix text-center">{{ posts.prices.current_price }}{{posts.prices.currency}}</p>
+        <p class="col-12 oldPrice text-center">au lieu de <strike>{{ posts.prices.old_price }}</strike></p>
       </div>
       <div class="col-md-6 col-xs-12">
         <button type="button" class="btn btn-lg">
@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  props:['posts'],
   name: 'myCardRightContentFooter'
 }
 </script>

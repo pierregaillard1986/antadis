@@ -8,9 +8,11 @@ import VueResource from 'vue-resource'
 
 // integration axios
 import axios from 'axios';
+
 // integration jquery
 import jQuery from 'jquery'
 global.jQuery = jQuery
+
 // integration bootstrap
 let Bootstrap = require('bootstrap')
 require('bootstrap/dist/css/bootstrap.min.css');

@@ -5,7 +5,7 @@
       <img src="../src/assets/pictures/logo.png" alt="logo antadis" class="mx-auto d-block">
     </div>
   </div>
-  <myCard/>
+  <myCard :posts="posts"></myCard>
 </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     }
   },
   created() {
-    axios.get(`https://cors.io/?http://gaillard_k9gko.recrutement.antadis.fr/api/product.json`)
+    axios.get(`https://crossorigin.me/http://gaillard_k9gko.recrutement.antadis.fr/api/product.json`)
       .then(response => {
         this.posts = response.data
       })

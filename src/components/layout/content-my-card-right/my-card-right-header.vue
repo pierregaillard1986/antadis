@@ -1,12 +1,13 @@
 <template>
   <div class="myCardRightHeader">
     <h1><span>Petit</span> Monstre Guerrier</h1>
-    <h5 class="pt-2">Magnifique et sympathique petit monstre !</h5>
+    <h5 class="pt-2">{{posts.description_short}}</h5>
   </div>
 </template>
 
 <script>
 export default {
+  props:['posts'],
   name: 'myCardRightHeader'
 }
 </script>

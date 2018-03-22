@@ -1,8 +1,8 @@
 <template>
 <div class="myCardRight col-lg-6 col-md-12 ml-auto mr-auto block">
-  <myCardRightHeader/>
-  <myCardRightContentDesktop/>
-  <myCardRightContentFooter/>
+  <myCardRightHeader :posts="posts"></myCardRightHeader>
+  <myCardRightContentDesktop :posts="posts"></myCardRightContentDesktop>
+  <myCardRightContentFooter :posts="posts"></myCardRightContentFooter>
 </div>
 </template>
 
@@ -12,6 +12,7 @@ import myCardRightContentDesktop from './content-my-card-right/my-card-right-con
 import myCardRightContentFooter from './content-my-card-right/my-card-right-footer'
 
 export default {
+  props:['posts'],
   name: 'myCardRight',
   components: {
     myCardRightHeader,
