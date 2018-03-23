@@ -1,8 +1,8 @@
 <template>
   <div class="myCardRightContentFooter container-fluid mt-5 align-items-end containerPrix">
     <div class="row justify-content-around">
-      <div class="col-md-6 col-xs-12 row">
-        <p class="col-12 prix text-center">{{ posts.prices.current_price }}{{posts.prices.currency}}</p>
+      <div class="col-md-6 col-xs-12 row" :if="posts.prices.current_price && posts.prices.currency && posts.prices.old_price">
+        <p class="col-12 prix text-center">{{ posts.prices.current_price + posts.prices.currency }}</p>
         <p class="col-12 oldPrice text-center">au lieu de <strike>{{ posts.prices.old_price }}</strike></p>
       </div>
       <div class="col-md-6 col-xs-12">

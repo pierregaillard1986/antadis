@@ -1,7 +1,7 @@
 <template>
 <div class="myCard card fullSize ml-auto mr-auto container-fluid">
   <div class="card-body">
-    <div class="row justify-content-around">
+    <div class="row justify-content-around" :if="posts">
       <myCardLeft :posts="posts"></myCardLeft>
       <myCardRight :posts="posts"></myCardRight>
     </div>

@@ -7,12 +7,12 @@
             <span>{{posts.prices.reduction}}</span>
           </div>
         </div>
-        <img class="card-img-left img-fluid" src="assets/pictures/image1.jpg" alt="Card image cap">
+        <img class="card-img-left img-fluid" src="../../../src/assets/pictures/image1.jpg" alt="Card image cap">
       </div>
     </div>
     <div class="row mt-3">
-      <img src="assets/pictures/miniature1.jpg" alt="logo miniature1" class="img-thumbnail">
-      <img src="assets/pictures/miniature2.jpg" class="img-thumbnail" alt="logo miniature2">
+      <img src="../../../src/assets/pictures/miniature1.jpg" alt="logo miniature1" class="img-thumbnail">
+      <img src="../../../src/assets/pictures/miniature2.jpg" class="img-thumbnail" alt="logo miniature2">
     </div>
   </div>
 </template>

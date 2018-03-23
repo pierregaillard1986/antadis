@@ -1,36 +1,38 @@
 
 <template>
 <div class="myCardRightContentDesktop">
-  <nav class="d-lg-block">
-    <div class="nav nav-tabs justify-content-around row" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active col-4" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
-      <a class="nav-item nav-link col-4" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Caractérisques</a>
-      <a class="nav-item nav-link col-4" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Plus d'infos</a>
-    </div>
-  </nav>
-  <div class="tab-content mt-3 d-lg-block" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      <p class="lead" v-html="posts.description"></p>
-    </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-      <table>
-        <tbody>
-          <tr v-for="item in posts.attributes">
-            <th scope="row" class="pr-3">{{item.name}}</th>
-            <td class="pl-5 borderLeftTable">{{item.value}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-      <p class="lead" v-html="posts.more_info"></p>
+  <div class="d-none d-lg-block d-xl-block">
+    <nav>
+      <div class="nav nav-tabs justify-content-around row" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active col-4" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
+        <a class="nav-item nav-link col-4" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Caractérisques</a>
+        <a class="nav-item nav-link col-4" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Plus d'infos</a>
+      </div>
+    </nav>
+    <div class="tab-content mt-3" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <p class="lead" v-html="posts.description"></p>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <table>
+          <tbody>
+            <tr v-for="item in posts.attributes">
+              <th scope="row" class="pr-3">{{item.name}}</th>
+              <td class="pl-5 borderLeftTable">{{item.value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <p class="lead" v-html="posts.more_info"></p>
+      </div>
     </div>
   </div>
   <!-- affichage mobile -->
   <div class="column d-lg-none">
     <div class="pt-3">
       <h2 class="backgroundCategories pl-4">Description</h2>
-      {{posts.description}}
+      <p class="lead" v-html="posts.description"></p>
     </div>
     <div class="pt-3">
       <h2 class="backgroundCategories pl-4">Caractérisques</h2>
@@ -41,7 +43,7 @@
     </div>
     <div class="pt-3">
       <h2 class="backgroundCategories pl-4">Plus d'info</h2>
-      {{posts.more_info}}
+      <p class="lead" v-html="posts.more_info"></p>
     </div>
   </div>
 </div>
@@ -98,7 +100,7 @@ th, td{
   color: #BCBCBC;
   line-height: 2.7;
 }
-.borderTable{
+tr:nth-child(even) th, tr:nth-child(even) td{
   border-top: 2px solid #BCBCBC;
   border-bottom: 2px solid #BCBCBC;
 }

@@ -1,5 +1,5 @@
 <template>
-<div class="myCardRight col-lg-6 col-md-12 ml-auto mr-auto block">
+<div class="myCardRight col-lg-6 col-md-12 ml-auto mr-auto block" :if="posts">
   <myCardRightHeader :posts="posts"></myCardRightHeader>
   <myCardRightContentDesktop :posts="posts"></myCardRightContentDesktop>
   <myCardRightContentFooter :posts="posts"></myCardRightContentFooter>
